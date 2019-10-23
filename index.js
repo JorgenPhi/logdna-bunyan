@@ -27,6 +27,7 @@ class BunyanStream extends EventEmitter {
     }
 
     write(record) {
+        record = JSON.parse(record)
 
         // LogDNA adds their own - lets assume the time delta is trivial
         // record['timestamp'] = record.time;
